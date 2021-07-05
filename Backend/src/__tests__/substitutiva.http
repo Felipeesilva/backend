@@ -1,0 +1,16 @@
+###
+POST http://localhost:3000/computador/cadastrar 
+Content-Type: application/json
+
+{
+    "dono": "Felipe",
+    "placamae": "asus",
+    "processador": "intel",
+    "memoria": 16,
+    "armazenamento": "1TB",
+    "fonte": "corsair"
+}
+
+###
+GET http://localhost:3000/computador/listar 
+
