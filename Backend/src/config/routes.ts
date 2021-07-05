@@ -6,5 +6,6 @@ const computadorController = new ComputadorController();
 
 router.post("/computador/cadastrar", computadorController.cadastrar);
 router.get("/computador/listar", computadorController.listar);
+router.delete("/computador/remover/:id", computadorController.remover);
 
 export { router };

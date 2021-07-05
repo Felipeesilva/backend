@@ -12,8 +12,24 @@ class ComputadorController {
     response.status(201).json(novoComputador);
   }
 
-
-
+//Deletar Computador
+    async remover (request: Request, response: Response){
+      try{
+          const {id} = request.params;
+          const remover = await ComputadorSchema.deleteOne({ _id: id});
+          response.status(200).json({
+              objeto: remover,
+              msg: "item deletado com sucesso",
+              erro: false
+          });
+      }catch ( error ){
+          response.status(401).json({
+              objeto: error,
+              msg: "Erro ao excluir solicitação!",
+              erro: true
+          })   
+      };
+  }
 
 }
 

@@ -2,6 +2,10 @@ import { model, Schema } from "mongoose";
 
 const computadorSchema = new Schema(
   {
+    idComputador: {
+      type: Number,
+      required: [true, 'O campo ID é obrigatório!'],
+    },
     dono: {
       type: String,
       required: [true, "O campo DONO é obrigatório!"],

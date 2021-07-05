@@ -3,14 +3,21 @@ POST http://localhost:3000/computador/cadastrar
 Content-Type: application/json
 
 {
-    "dono": "Felipe",
+    "idComputador": 1,
+    "dono": "joao",
     "placamae": "asus",
-    "processador": "intel",
-    "memoria": 16,
-    "armazenamento": "1TB",
+    "processador": "ryzen",
+    "memoria": 8,
+    "armazenamento": "2TB",
     "fonte": "corsair"
 }
 
 ###
 GET http://localhost:3000/computador/listar 
+
+
+// remover
+
+###
+DELETE http://localhost:3000/computador/remover/60e3962ef5c56535e44fc436
 
